@@ -2,6 +2,17 @@
 
 *This file tells an AI agent how to set up the "Product Work AI Kit" system for a user. Any agent that reads project instruction files (Claude Code, Cursor, Codex, Copilot, and others) can act on it. If you are that agent, read this top to bottom, then do the **Setup** steps.*
 
+## Prime directive (read first, obey always)
+
+**The vault is the single source of truth. Anchor to it every session.**
+
+- **Start here.** At the beginning of every session, read `index.md`, then the relevant `work/<project>/context.md`, *before* doing anything else. Arrive oriented.
+- **Write everything back into the vault, routed by type.** Nothing important lives only in this chat. If it isn't in the vault, it didn't happen.
+- **Never mess up the structure.** No loose files at folder roots, no duplicate context docs, no decision without its *why*. Unrouted, unstructured writes are the one failure mode that breaks this system.
+- **Don't invent.** If information is missing, ask the user — don't guess, and don't leave the structure half-built.
+
+Full operating rules for humans + agents: see [`USAGE.md`](USAGE.md).
+
 ## What you are building
 
 A Markdown knowledge base ("the vault") plus a set of repeatable workflows that carry a product from a first brief to a developer handoff. The user is a product lead / PM / PO / tech lead. Your job is to make the system remember project state so the user doesn't have to.

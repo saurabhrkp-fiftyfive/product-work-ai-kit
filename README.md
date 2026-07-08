@@ -17,6 +17,7 @@ Hand this repo to any capable AI agent (Claude Code, Cursor, Copilot, ChatGPT, G
 | Path | What it is |
 |------|-----------|
 | [`starter-kit.md`](starter-kit.md) | The full guide — pillars, the pipeline, the two everyday loops, how to bootstrap. Read this first. |
+| [`USAGE.md`](USAGE.md) | **Operating rules** — how you and your agent keep the vault the source of truth so the structure never rots. Read before you start. |
 | [`AGENTS.md`](AGENTS.md) | The instruction file your AI agent ingests to set the system up for you. |
 | [`templates/`](templates/) | Fill-in Markdown templates: PRD, proposal, estimate, handoff, meeting note, decision, project context. |
 | [`prompts/`](prompts/) | Copy-paste prompt templates for each pipeline stage + the feedback and validation loops. |
@@ -38,6 +39,22 @@ cp -r example-vault ~/my-vault
 ```
 
 Then run one real project through the pipeline using the [`prompts/`](prompts/), feed the outputs back into your project's `context.md`, and after 2–3 projects you'll have benchmarks, linked decisions, and a memory your agent navigates for you.
+
+## Ground rules (read before you start)
+
+This kit only works if the vault stays the **single source of truth** and your agent **starts from it every session**. Skip that discipline and the structure rots into an unstructured pile — and the AI's output rots with it. The full do/don't list is in [`USAGE.md`](USAGE.md); the one step you must not skip is pinning your agent to the vault.
+
+**Paste this into your agent's standing instructions** (`CLAUDE.md`, `.cursorrules`, `AGENTS.md`, a system prompt):
+
+```
+This project's knowledge base ("the vault") is at <PATH-TO-YOUR-VAULT>.
+It is the SINGLE SOURCE OF TRUTH.
+1. Every session, read `index.md` then the relevant work/<project>/context.md before doing anything.
+2. Route every artifact by type (PRD→proposals/, decision→decisions/, meeting→meetings/, dev spec→handoffs/). Never write files loose.
+3. When I decide something, write a decision file (Context/Decision/Consequences — capture the why).
+4. Keep context.md living — update in place, never duplicate.
+5. Link related notes. If information is missing, ask me — don't invent it.
+```
 
 ## The two everyday loops
 
