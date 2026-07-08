@@ -22,6 +22,7 @@ Hand this repo to any capable AI agent (Claude Code, Cursor, Copilot, ChatGPT, G
 | [`templates/`](templates/) | Fill-in Markdown templates: PRD, proposal, estimate, handoff, meeting note, decision, project context. |
 | [`prompts/`](prompts/) | Copy-paste prompt templates for each pipeline stage + the feedback and validation loops. |
 | [`example-vault/`](example-vault/) | A worked folder layout you can copy as your starting structure. |
+| [`bonus-my-ai-stack.md`](bonus-my-ai-stack.md) | Bonus — the tools I use and why, plus notes on custom systems I've built. A menu to borrow from. |
 
 ## Quickstart (ship ugly v1)
 
